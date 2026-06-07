@@ -436,7 +436,7 @@ input[type="number"] {
     min-width: 0;
 }
 .label-name {
-    font-size: clamp(11px, 3vw, 14px);
+    font-size: clamp(10.5px, 3vw, 13.5px);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
