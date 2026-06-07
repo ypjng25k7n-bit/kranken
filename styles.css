@@ -415,3 +415,56 @@ input[type="number"]::-webkit-inner-spin-button {
 input[type="number"] {
     -moz-appearance: textfield;
 }
+/* Mobile Optimierung für Abzüge */
+.deduction-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 8px;
+    padding: 8px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+.deduction-label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 1;
+    min-width: 0;
+}
+.label-name {
+    font-size: clamp(11px, 3vw, 14px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.percentage {
+    font-size: clamp(10px, 2.5vw, 13px);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+.deduction-value {
+    font-size: clamp(11px, 3vw, 14px);
+    white-space: nowrap;
+    flex-shrink: 0;
+    text-align: right;
+}
+.deductions {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+}
+@media (max-width: 380px) {
+    .label-name {
+        font-size: 10px;
+    }
+    .percentage {
+        font-size: 10px;
+    }
+    .deduction-value {
+        font-size: 10px;
+    }
+}
