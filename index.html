@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brutto-Netto-Rechner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+
+    <div class="container">
+        <header>
+            <h1>💰 Gehaltsrechner</h1>
+            <p class="subtitle">Berechne dein Nettoeinkommen in Sekunden</p>
+        </header>
+
+        <main class="calculator">
+            <div class="empty-state" id="emptyState">
+                <p>👇 Gib dein Bruttogehalt ein und klicke auf "Berechnen"</p>
+            </div>
+
+            <div class="input-group">
+                <label for="bruttoInput">Bruttogehalt (€)</label>
+                <div class="input-wrapper">
+                    <span class="currency-symbol">€</span>
+                    <input
+                        type="number"
+                        id="bruttoInput"
+                        placeholder="z.B. 2000"
+                        min="0"
+                        step="100"
+                        autofocus
+                    >
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Kirche</label>
+                <div class="radio-wrapper">
+                    <label class="radio-label">
+                        <input type="radio" name="kirche" id="kircheJa" value="ja">
+                        Ja
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="kirche" id="kircheNein" value="nein" checked>
+                        Nein
+                    </label>
+                </div>
+            </div>
+
+            <button id="calculateBtn" class="calculate-btn">
+                <span class="btn-text">Berechnen</span>
+                <span class="btn-icon">→</span>
+            </button>
+
+            <div class="results" id="results" style="display: none;">
+                <div class="result-card primary">
+                    <div class="result-item">
+                        <span class="result-label">Bruttogehalt</span>
+                        <span class="result-value" id="resultBrutto">€ 0,00</span>
+                    </div>
+                </div>
+
+                <div class="deductions">
+                    <h3>Abzüge</h3>
+                    <div class="deduction-item">
+                        <span class="deduction-label">
+                            <span class="label-name">Lohnsteuer</span>
+                            <span class="percentage" id="percentageTax">0%</span>
+                        </span>
+                        <span class="deduction-value" id="deductionTax">€ 0,00</span>
+                    </div>
+                    <div class="deduction-item" id="kirchensteuerRow" style="display: none;">
+                        <span class="deduction-label">
+                            <span class="label-name">Kirchensteuer</span>
+                            <span class="percentage" id="percentageKirchensteuer">0%</span>
+                        </span>
+                        <span class="deduction-value" id="deductionKirchensteuer">€ 0,00</span>
+                    </div>
+                    <div class="deduction-item">
+                        <span class="deduction-label">
+                            <span class="label-name">Krankenversicherung</span>
+                            <span class="percentage" id="percentageKV">0%</span>
+                        </span>
+                        <span class="deduction-value" id="deductionKV">€ 0,00</span>
+                    </div>
+                    <div class="deduction-item">
+                        <span class="deduction-label">
+                            <span class="label-name">Rentenversicherung</span>
+                            <span class="percentage" id="percentageRV">0%</span>
+                        </span>
+                        <span class="deduction-value" id="deductionRV">€ 0,00</span>
+                    </div>
+                    <div class="deduction-item">
+                        <span class="deduction-label">
+                            <span class="label-name">Arbeitslosenversicherung</span>
+                            <span class="percentage" id="percentageALV">0%</span>
+                        </span>
+                        <span class="deduction-value" id="deductionALV">€ 0,00</span>
+                    </div>
+                </div>
+
+                <div class="result-card netto">
+                    <div class="result-item">
+                        <span class="result-label">Nettoeinkommen</span>
+                        <span class="result-value netto-value" id="resultNetto">€ 0,00</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2026 Gehaltsrechner | Schnell & einfach</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
