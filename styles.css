@@ -436,7 +436,7 @@ input[type="number"] {
     min-width: 0;
 }
 .label-name {
-    font-size: clamp(11px, 3vw, 14px);
+    font-size: clamp(10px, 2.5vw, 13px);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -444,12 +444,12 @@ input[type="number"] {
 .percentage {
     font-size: clamp(10px, 2.5vw, 13px);
     white-space: nowrap;
-    flex-shrink: 0;
+    flex-shrink: 1;
 }
 .deduction-value {
-    font-size: clamp(11px, 3vw, 14px);
+    font-size: clamp(10px, 2.5vw, 13px);
     white-space: nowrap;
-    flex-shrink: 0;
+    flex-shrink: 1;
     text-align: right;
 }
 .deductions {
