@@ -438,7 +438,6 @@ input[type="number"] {
 .label-name {
     font-size: clamp(10.5px, 3vw, 13.5px);
     white-space: nowrap;
-    overflow: hidden;
     text-overflow: ellipsis;
 }
 .percentage {
